@@ -1,0 +1,94 @@
+body {
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    background-color: black;
+    flex-direction: column;
+}
+
+.words{
+    color: black;
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title, .score{
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 45px;
+}
+
+.mainContainer {
+    display: grid;
+    grid-template-columns:repeat(5, 1fr);
+    grid-template-rows:repeat(1, 1fr);
+}
+
+.item{
+    font-size: 35px;
+    display: flex;
+    align-items: center;;
+    justify-content: center;
+    padding: 10px;
+    color: orangered;
+    border: white 3px ridge;;
+}
+
+#p{
+    border: orangered;
+} 
+
+.question{
+    background-color: black;
+    width: 100%;
+    height: auto;
+    color: white;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.QNA {
+    background-color: black;
+    width: 100%;
+    height: auto;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#enterbutton {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.askedQuestion {
+    font-size: 20px;
+    border: 1px solid white;
+    width: auto;
+}
+
+.container2 { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
