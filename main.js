@@ -42,8 +42,7 @@ function filterQuestions() {
 		else if (question.value === "$800") {
 			output800.push(question)
 		}
-} 
-filterQuestions()
+} filterQuestions()
 
 function onClickRandomQuestion(){
 	// query the item that was created
@@ -78,7 +77,15 @@ function onClickRandomQuestion(){
 			}
 		});
 	}
-}
-onClickRandomQuestion()
+}onClickRandomQuestion()
 
 
+function clickedSubmit(){
+	// query the item that was created
+	const enterButton = $('.enterbutton');
+		//query the box where our question will appear.
+	const input = $('.textInput');
+		enterButton.click(function () {
+			console.log("enterButton:")
+	})
+}clickedSubmit()
