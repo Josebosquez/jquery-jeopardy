@@ -32,7 +32,7 @@ function filterQuestions() {
 		}
 		else if (question.value === "$200") {
 			output200.push(question)
-		} 
+		}
 		else if (question.value === "$400") {
 			output400.push(question)
 		}
@@ -44,7 +44,7 @@ function filterQuestions() {
 		}
 } filterQuestions()
 
-function onClickRandomQuestion(){
+function onClickRandomQuestion() {
 	// query the item that was created
 	const JQbuttons = $('.item');
 	//query the box where our question will appear.
@@ -55,37 +55,36 @@ function onClickRandomQuestion(){
 		const button = $(JQB);
 		// loop through our items to see if the item value is 100, if it is run the event listener that calls for random question from that numbers arr.
 		button.click(function () {
-			if (button.text() === "$100"){
+			if (button.text() === "$100") {
 				let randomQ100 = output100[Math.floor(Math.random() * output100.length)]
 				newItem.text(randomQ100.question)
 			}
-			else if (button.text() === "$200"){
+			else if (button.text() === "$200") {
 				let randomQ200 = output200[Math.floor(Math.random() * output200.length)]
 				newItem.text(randomQ200.question)
 			}
-			else if (button.text() === "$400"){
+			else if (button.text() === "$400") {
 				let randomQ400 = output400[Math.floor(Math.random() * output400.length)]
 				newItem.text(randomQ400.question)
 			}
-			else if (button.text() === "$600"){
+			else if (button.text() === "$600") {
 				let randomQ600 = output600[Math.floor(Math.random() * output600.length)]
 				newItem.text(randomQ600.question)
 			}
-			else if (button.text() === "$800"){
+			else if (button.text() === "$800") {
 				let randomQ800 = output800[Math.floor(Math.random() * output800.length)]
 				newItem.text(randomQ800.question)
 			}
 		});
 	}
-}onClickRandomQuestion()
+} onClickRandomQuestion()
 
 
-function clickedSubmit(){
+function clickedSubmit() {
 	// query the item that was created
 	const enterButton = $('.enterbutton');
-		//query the box where our question will appear.
+	//query the box where our question will appear.
 	const input = $('.textInput');
-		enterButton.click(function () {
-			console.log("enterButton:")
+	enterButton.click(function () {
 	})
-}clickedSubmit()
+} clickedSubmit()
