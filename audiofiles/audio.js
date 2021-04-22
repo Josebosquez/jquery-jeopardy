@@ -22,6 +22,12 @@ function stop(){
 }
 
 
+
+
+
+
+
+
 let audio1 = document.getElementById("audio1");
 let playPauseBTN1 = document.getElementById("playPauseBTN1");
 var count = 0;

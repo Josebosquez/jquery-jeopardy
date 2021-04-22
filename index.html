@@ -11,14 +11,6 @@
 
 </head>
 <body>
-    <!-- <audio id="myAudio" controls autoplay> -->
-        <!-- <source id = "audio" src="music.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-      </audio>
-      <audio id = "audio1" id="myAudio" controls autoplay>
-        <source src="album.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-      </audio> -->
     <div>
         <div class="words">
             <div class="title">
@@ -40,10 +32,18 @@
             <div class="askedQuestion"><h4>Question</h4></div>
             <div class="QNA"> 
                 <input type="text" id="textInput" placeholder="Your Answer">
-                <button class="enterbutton" placeholder="Submit">
+                <button class="enterButton" placeholder="Submit">
                 </div>
             </div>
-            <audio id="audio">
+
+
+            <audio id="audio" controls autoplay>
+                <source src="sounds/music.mp3" type="audio/mp3">
+            </audio>
+            <audio id="audio" controls autoplay>
+                <source src="sounds/album.mp3" type="audio/mp3">
+            </audio>
+            <!-- <audio id="audio">
                 <source src="sounds/music.mp3" type="audio/mp3">
             </audio>
             <p></p>
@@ -59,15 +59,11 @@
             <button id="playPauseBTN1" onclick="playPause1()">&#9658;</button>
             &nbsp;
             &nbsp;
-            <button onclick="stop1()">&#9611;</button>
+            <button onclick="stop1()">&#9611;</button> -->
         </div>
     <script src="audiofiles/audio.js"></script>
     <script src="jeopardy.js"></script>
     <script src="main.js"></script>
-    <!-- <script type="text/javascript">
-        alert("Hello, this webpage contains sounds and images not suitable for most viewers. Please be aware of this before proceeding");
-        </script>
-         -->
 </body>
 </html>
 

@@ -1,3 +1,6 @@
+//////////////////////////////
+// create dom elements
+//////////////////////////////
 const container = $('.mainContainer');
 
 const numOfColumns = 5;
@@ -18,7 +21,11 @@ for (let i = 0; i < numOfColumns; i++) {
 	container.append(column);
 }
 
+
+
+//////////////////////////////
 // filter my questions to break down the objects into arrays
+//////////////////////////////
 const output100 = [];
 const output200 = [];
 const output400 = [];
@@ -44,11 +51,15 @@ function filterQuestions() {
 		}
 } filterQuestions()
 
+///////////////////////////////
+// give me a random question when an item is clicked
+//////////////////////////////
+let question = "hi"
+const newItem = $('.askedQuestion');
 function onClickRandomQuestion() {
-	// query the item that was created
 	const JQbuttons = $('.item');
+	// query the item that was created
 	//query the box where our question will appear.
-	const newItem = $('.askedQuestion');
 	// loop through our items
 	for (const JQB of JQbuttons) {
 		// make a variable that allows us to call for our item.
@@ -56,35 +67,66 @@ function onClickRandomQuestion() {
 		// loop through our items to see if the item value is 100, if it is run the event listener that calls for random question from that numbers arr.
 		button.click(function () {
 			if (button.text() === "$100") {
-				let randomQ100 = output100[Math.floor(Math.random() * output100.length)]
-				newItem.text(randomQ100.question)
+				question = output100[Math.floor(Math.random() * output100.length)]
+				newItem.text(question.question)
+				console.log(question)
 			}
 			else if (button.text() === "$200") {
-				let randomQ200 = output200[Math.floor(Math.random() * output200.length)]
-				newItem.text(randomQ200.question)
+				question = output200[Math.floor(Math.random() * output200.length)]
+				newItem.text(question.question)
+				console.log(button.text())
 			}
 			else if (button.text() === "$400") {
-				let randomQ400 = output400[Math.floor(Math.random() * output400.length)]
-				newItem.text(randomQ400.question)
+				question = output400[Math.floor(Math.random() * output400.length)]
+				newItem.text(question.question)
+				console.log(button.text())
 			}
 			else if (button.text() === "$600") {
-				let randomQ600 = output600[Math.floor(Math.random() * output600.length)]
-				newItem.text(randomQ600.question)
+				question = output600[Math.floor(Math.random() * output600.length)]
+				newItem.text(question.question)
+				console.log(button.text())
 			}
 			else if (button.text() === "$800") {
-				let randomQ800 = output800[Math.floor(Math.random() * output800.length)]
-				newItem.text(randomQ800.question)
+				question = output800[Math.floor(Math.random() * output800.length)]
+				newItem.text(question.question)
+				console.log(button.text())
 			}
 		});
-	}
+	} 
+	
+	///////////////////////////
+	// submit button is clicked 
+	///////////////////////////
+	
+	function clickedSubmit() {
+		// query the item that was created
+		const enterButton = $('.enterButton');
+		//query the box where our question will appear.
+		const input = $('#textInput');
+		//query the box where our question/answer will appear.
+		const newItem = $('.askedQuestion');
+		console.log(newItem)
+		enterButton.click(function () {
+			console.log(newItem.html)
+			console.log(input.val())
+			console.log(question)
+			console.log(question.answer)
+			if (question.answer === input.val()){
+				console.log(newItem.text())
+				newItem.text("Good Job Dude!") 
+			} else {
+				newItem.html('Incorrect! Try again.')
+				// newItem.html('<div id="scary"><img id="hello" src = "images/hello.jpeg"></img>') 
+				// const hello = $('#hello')
+				// let woman = new Audio ('sounds/woman.mp3')
+				// woman.play()
+			}
+
+			
+			
+			
+			
+		})
+	} 
+	clickedSubmit()
 } onClickRandomQuestion()
-
-
-function clickedSubmit() {
-	// query the item that was created
-	const enterButton = $('.enterbutton');
-	//query the box where our question will appear.
-	const input = $('.textInput');
-	enterButton.click(function () {
-	})
-} clickedSubmit()
